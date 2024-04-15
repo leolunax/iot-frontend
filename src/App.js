@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import LedControl from "./components/LedControl";
+import SensorData from "./components/SensorData";
+import './index.css';
+import SensorCharts from './components/SensorCharts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center min-h-screen bg-black w-full overflow-hidden">
+      <div className='text-white text-4xl font-bold tracking-tight mb-10'>IoT Dashboard</div>
+      
+      <SensorData />
+      <LedControl />
+      <SensorCharts />
+      
+      <div className="h-[300px]"></div> 
     </div>
   );
 }
